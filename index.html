@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Bielen — Senior Operations &amp; Process Improvement Manager</title>
+  <meta name="description" content="Michael Bielen — Senior Operations and Process Improvement Manager with 22 years of enterprise experience in data governance, AI-assisted automation, and operational leadership." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Sora (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <style>
+    /* ── Base ── */
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1a2332; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    /* ── Typography ── */
+    .font-display { font-family: 'Sora', sans-serif; }
+
+    /* ── Nav ── */
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; border-bottom: 1px solid #e8eaf0;
+      background: #ffffff; position: sticky; top: 0; z-index: 50;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .nav-logo { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 18px; color: #1a2332; text-decoration: none; }
+    .nav-logo span { color: #4f46e5; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 14px; color: #5a6a80; text-decoration: none; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: #1a2332; }
+    .nav-btn { background: #4f46e5; color: #fff !important; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.15s; }
+    .nav-btn:hover { background: #4338ca !important; }
+
+    /* Mobile hamburger */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; color: #5a6a80; padding: 4px; }
+    .mobile-menu { display: none; flex-direction: column; gap: 4px; padding: 1rem 2rem 1.25rem; background: #fff; border-bottom: 1px solid #e8eaf0; }
+    .mobile-menu a { font-size: 15px; color: #5a6a80; text-decoration: none; padding: 8px 0; border-bottom: 1px solid #f0f2f5; font-weight: 500; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu.open { display: flex; }
+
+    /* ── Hero ── */
+    .hero { padding: 4rem 2rem 3.5rem; background: #ffffff; border-bottom: 1px solid #e8eaf0; max-width: 1100px; margin: 0 auto; }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #4f46e5; margin-bottom: 1.25rem; }
+    .hero-headline { font-family: 'Sora', sans-serif; font-size: clamp(22px, 3.5vw, 36px); font-weight: 300; color: #1a2332; line-height: 1.3; max-width: 720px; margin-bottom: 0.5rem; }
+    .hero-headline strong { font-weight: 700; color: #4f46e5; }
+    .hero-name { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 600; color: #1a2332; margin: 1.5rem 0 0.5rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 1.25rem; }
+    .location { font-size: 14px; color: #5a6a80; display: flex; align-items: center; gap: 5px; }
+    .location i { color: #4f46e5; font-size: 15px; }
+    .open-badge { font-size: 12px; font-weight: 700; color: #4f46e5; background: #eef2ff; padding: 4px 12px; border-radius: 20px; border: 1px solid #c7d2fe; }
+    .hero-bio { font-size: 16px; color: #5a6a80; max-width: 600px; line-height: 1.75; margin-bottom: 2rem; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn-primary { background: #4f46e5; color: #fff; padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.15s, transform 0.1s; border: none; cursor: pointer; }
+    .btn-primary:hover { background: #4338ca; transform: translateY(-1px); }
+    .btn-secondary { background: #ffffff; color: #1a2332; padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #cbd5e1; transition: border-color 0.15s, color 0.15s; cursor: pointer; }
+    .btn-secondary:hover { border-color: #4f46e5; color: #4f46e5; }
+
+    /* ── Stat bar ── */
+    .stat-bar { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #e8eaf0; border-bottom: 1px solid #e8eaf0; background: #f7f8fa; }
+    .stat-item { padding: 1.5rem 1.75rem; border-right: 1px solid #e8eaf0; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 700; color: #4f46e5; line-height: 1; margin-bottom: 5px; }
+    .stat-label { font-size: 12px; color: #8b9bb4; line-height: 1.45; }
+
+    /* ── Sections ── */
+    .section { padding: 3rem 2rem; border-bottom: 1px solid #e8eaf0; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-alt { background: #f7f8fa; }
+    .section-white { background: #ffffff; }
+    .section-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #4f46e5; margin-bottom: 0.5rem; }
+    .section-title { font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 600; color: #1a2332; margin-bottom: 1.75rem; }
+
+    /* ── About ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+    .about-text p { font-size: 15px; color: #5a6a80; line-height: 1.8; margin-bottom: 1rem; }
+    .about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .about-card { background: #ffffff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 1.25rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+    .about-card-num { font-family: 'Sora', sans-serif; font-size: 30px; font-weight: 700; color: #4f46e5; }
+    .about-card-label { font-size: 12px; color: #8b9bb4; line-height: 1.4; margin-top: 4px; }
+
+    /* ── Skills ── */
+    .skills-group { margin-bottom: 1.75rem; }
+    .skills-group-label { font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: #8b9bb4; margin-bottom: 10px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge { font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 1px solid #e2e8f0; background: #ffffff; color: #5a6a80; white-space: nowrap; transition: all 0.15s; cursor: default; }
+    .badge:hover { background: #eef2ff; color: #4f46e5; border-color: #c7d2fe; }
+    .badge-accent { background: #eef2ff; color: #4338ca; border-color: #c7d2fe; font-weight: 600; }
+    .badge-accent:hover { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+
+    /* ── Experience timeline ── */
+    .timeline { padding-left: 24px; border-left: 2px solid #c7d2fe; }
+    .exp-card { position: relative; margin-bottom: 1.75rem; }
+    .exp-card::before { content: ''; position: absolute; left: -30px; top: 18px; width: 12px; height: 12px; border-radius: 50%; background: #4f46e5; border: 2.5px solid #ffffff; box-shadow: 0 0 0 2px #c7d2fe; }
+    .exp-inner { background: #ffffff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 1.5rem 1.75rem; transition: border-color 0.15s, box-shadow 0.15s; }
+    .exp-inner:hover { border-color: #c7d2fe; box-shadow: 0 4px 16px rgba(79,70,229,0.08); }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+    .exp-title { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 600; color: #1a2332; }
+    .exp-company { font-size: 14px; font-weight: 500; color: #4f46e5; margin-top: 3px; }
+    .exp-dates { font-size: 12px; color: #8b9bb4; white-space: nowrap; background: #f7f8fa; padding: 4px 10px; border-radius: 6px; border: 1px solid #e8eaf0; flex-shrink: 0; margin-top: 2px; }
+    .exp-body { font-size: 14px; color: #5a6a80; line-height: 1.7; margin-bottom: 1rem; }
+    .exp-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .exp-bullet { display: flex; gap: 12px; align-items: flex-start; }
+    .bullet-dot { color: #4f46e5; flex-shrink: 0; margin-top: 3px; font-size: 10px; line-height: 1; }
+    .bullet-content { display: flex; flex-direction: column; gap: 3px; }
+    .bullet-label { font-size: 13px; font-weight: 600; color: #1a2332; white-space: nowrap; }
+    .bullet-desc { font-size: 13px; color: #5a6a80; line-height: 1.6; }
+    .exp-earlier { background: #f7f8fa; border: 1px solid #e8eaf0; border-radius: 8px; padding: 1rem 1.25rem; font-size: 14px; color: #5a6a80; line-height: 1.7; }
+    .exp-earlier strong { color: #1a2332; font-weight: 600; }
+
+    /* ── Education / Recognition ── */
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .edu-card { background: #ffffff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 1.25rem 1.5rem; }
+    .edu-label { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #4f46e5; margin-bottom: 1rem; }
+    .edu-item { margin-bottom: 0.85rem; }
+    .edu-item:last-child { margin-bottom: 0; }
+    .edu-degree { font-size: 14px; font-weight: 500; color: #1a2332; }
+    .edu-school { font-size: 13px; color: #8b9bb4; margin-top: 2px; }
+    .award { display: flex; gap: 10px; font-size: 14px; color: #5a6a80; margin-bottom: 10px; align-items: flex-start; }
+    .award:last-child { margin-bottom: 0; }
+    .award-star { color: #4f46e5; font-size: 12px; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── Contact ── */
+    .contact-cards { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 0; }
+    .contact-card { display: flex; align-items: center; gap: 14px; background: #ffffff; border: 1px solid #e8eaf0; border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; flex: 1; min-width: 200px; }
+    .contact-card:hover { border-color: #4f46e5; box-shadow: 0 2px 12px rgba(79,70,229,0.1); }
+    .contact-icon { width: 40px; height: 40px; border-radius: 8px; background: #eef2ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-icon i { font-size: 20px; color: #4f46e5; }
+    .contact-label { font-size: 11px; color: #8b9bb4; margin-bottom: 2px; }
+    .contact-value { font-size: 14px; font-weight: 500; color: #1a2332; }
+
+    /* ── Footer ── */
+    .footer { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; background: #f7f8fa; border-top: 1px solid #e8eaf0; flex-wrap: wrap; gap: 10px; max-width: 100%; }
+    .footer-name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px; color: #1a2332; }
+    .footer-name span { color: #4f46e5; }
+    .footer-copy { font-size: 12px; color: #8b9bb4; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .stat-bar { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { border-bottom: 1px solid #e8eaf0; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-cards { grid-template-columns: 1fr 1fr; }
+      .edu-grid { grid-template-columns: 1fr; }
+      .bullet-label { white-space: normal; }
+      .hero { padding: 2.5rem 1.25rem 2rem; }
+      .section { padding: 2rem 1.25rem; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .about-cards { grid-template-columns: 1fr; }
+      .stat-bar { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════ -->
+  <nav class="nav">
+    <a href="#hero" class="nav-logo">MB<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="Michael_Bielen_Resume.pdf" download class="nav-btn">
+        <i class="ti ti-download"></i> Résumé
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <i class="ti ti-menu-2" style="font-size:24px;"></i>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <!-- REPLACE "resume.pdf" with your actual resume filename -->
+    <a href="resume.pdf" download style="color:#4f46e5;font-weight:600;">⬇ Download Résumé</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════
+       HERO
+  ═══════════════════════════════ -->
+  <section id="hero">
+    <div class="hero">
+      <p class="eyebrow">Senior Operations &amp; Process Improvement Manager</p>
+      <h1 class="hero-headline">
+        "I find out what the real problem is,<br>
+        then build the system that <strong>solves it for good.</strong>"
+      </h1>
+      <p class="hero-name">Michael Bielen</p>
+      <div class="hero-meta">
+        <span class="location"><i class="ti ti-map-pin"></i> Westfield, NJ &nbsp;·&nbsp; NYC Metro</span>
+        <span class="open-badge">Open to Remote &amp; Hybrid</span>
+      </div>
+      <p class="hero-bio">
+        Nearly 22 years solving complex, undefined operational problems at enterprise scale.
+        My strength is the analytical layer — understanding data, structuring it, and building
+        the reviews, automation, and AI-assisted workflows that keep it reliable long-term.
+      </p>
+      <div class="hero-ctas">
+        <!-- REPLACE with your actual LinkedIn URL -->
+        <a href="https://linkedin.com/in/michaelbielen" target="_blank" rel="noopener" class="btn-primary">
+          <i class="ti ti-brand-linkedin"></i> View LinkedIn
+        </a>
+        <!-- REPLACE "resume.pdf" with your actual resume filename -->
+        <a href="resume.pdf" download class="btn-secondary">
+          <i class="ti ti-download"></i> Download Résumé
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       STAT BAR
+  ═══════════════════════════════ -->
+  <div class="stat-bar">
+    <div class="stat-item">
+      <div class="stat-num">22+</div>
+      <div class="stat-label">Years enterprise ops experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2B+</div>
+      <div class="stat-label">Records in DOJ subpoena response</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">EHNAC score — highest in company history</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">$15M</div>
+      <div class="stat-label">Strategic vendor deal negotiated</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════
+       ABOUT
+  ═══════════════════════════════ -->
+  <section id="about" class="section section-white">
+    <div class="section-inner">
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title">The operator behind the curtain.</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>My career has been built on taking messy, undefined problems — the ones with no existing playbook — and building the process or system that puts them to rest. DOJ subpoena with two billion records. Azure data center migration with 1,200+ test cases. AI agents that eliminated manual governance busywork. Same pattern every time.</p>
+          <p>I've led teams of business analysts, project managers, and data scientists, and I'm equally comfortable as a hands-on individual contributor. What's constant is a data-first mindset: I understand how data flows, where it breaks, and how to structure it so decisions are trustworthy.</p>
+          <p>I'm now bringing that operational depth into high-growth technology and AI infrastructure environments where enterprise rigor and speed of iteration need to coexist.</p>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-num">22+</div>
+            <div class="about-card-label">Years of enterprise ops experience</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-num">2B+</div>
+            <div class="about-card-label">Records analyzed in a single subpoena response</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-num">98%</div>
+            <div class="about-card-label">EHNAC cert score — highest in company history</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-num">$15M</div>
+            <div class="about-card-label">Strategic vendor agreement negotiated</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       SKILLS
+  ═══════════════════════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow">Core Competencies</p>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+
+      <div class="skills-group">
+        <div class="skills-group-label">Operations &amp; Process</div>
+        <div class="badges">
+          <span class="badge">Process Improvement</span>
+          <span class="badge">Operations Management</span>
+          <span class="badge">Business Process Management</span>
+          <span class="badge">Change Management</span>
+          <span class="badge">Program &amp; Project Management</span>
+          <span class="badge">Vendor Management</span>
+          <span class="badge">User Acceptance Testing</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-label">Data &amp; Governance</div>
+        <div class="badges">
+          <span class="badge">Data Governance</span>
+          <span class="badge">Data Organization &amp; Quality</span>
+          <span class="badge">Regulatory &amp; Compliance Coordination</span>
+          <span class="badge">Stakeholder Coordination</span>
+          <span class="badge">Cross-Functional Leadership</span>
+          <span class="badge">Process Documentation</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-label">AI, Automation &amp; Tools</div>
+        <div class="badges">
+          <span class="badge badge-accent">AI-Assisted Automation</span>
+          <span class="badge badge-accent">Microsoft Copilot &amp; Copilot Studio</span>
+          <span class="badge">Microsoft Excel</span>
+          <span class="badge">Smartsheet</span>
+          <span class="badge">Azure DevOps</span>
+          <span class="badge">SharePoint</span>
+          <span class="badge">Tableau</span>
+          <span class="badge">Salesforce</span>
+          <span class="badge">Aha!</span>
+          <span class="badge">Oracle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════ -->
+  <section id="experience" class="section section-white">
+    <div class="section-inner">
+      <p class="section-eyebrow">Experience</p>
+      <h2 class="section-title">Career highlights</h2>
+
+      <div class="timeline">
+
+        <!-- Role 1 -->
+        <div class="exp-card">
+          <div class="exp-inner">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Senior Manager, Process Improvement &amp; Data Governance</div>
+                <div class="exp-company">Cognizant — TriZetto Product House</div>
+              </div>
+              <div class="exp-dates">Nov 2022 – Jun 2026</div>
+            </div>
+            <p class="exp-body">Led data analytics, then data governance, normalization, and application operations after a group reorganization. Spanned Azure DevOps, Aha!, and Smartsheet supporting release validation, governance intake, and operational reporting.</p>
+            <ul class="exp-bullets">
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">Software Governance Intake</span>
+                  <span class="bullet-desc">Ran intake across Security, Architecture, Legal, and Desktop Support — 167 reviews in 2024 and 150+ in 2025 with consistent 24-hour turnaround. Built an AI-evaluated normalized tool inventory replacing years of fragmented data with a single trusted source.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">AI-Assisted Automation</span>
+                  <span class="bullet-desc">Built agents in Microsoft Copilot Studio that streamlined the governance process and measurably reduced manual effort.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">Data Governance Mapping</span>
+                  <span class="bullet-desc">Mapped server data across 800+ Product House systems, creating a verified inventory for enterprise compliance and audit readiness.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">EHNAC Re-Certification</span>
+                  <span class="bullet-desc">Coordinated five third-party site reviews to a 98% score — tying the highest in company history.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">Smartsheet Administration</span>
+                  <span class="bullet-desc">Administered 700+ user accounts; used AI to reclaim ~30 unused licenses per quarter, eliminating need to purchase additional licenses.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="exp-card">
+          <div class="exp-inner">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Senior Manager, Business Analysis / Project Management</div>
+                <div class="exp-company">Cognizant — TriZetto Provider Solutions</div>
+              </div>
+              <div class="exp-dates">Jan 2018 – Oct 2022</div>
+            </div>
+            <p class="exp-body">Led enterprise programs and PMO operations spanning infrastructure migration, regulatory compliance, product commercialization, and business intelligence.</p>
+            <ul class="exp-bullets">
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">Azure Migration UAT</span>
+                  <span class="bullet-desc">Managed user acceptance testing for a full data center migration with no existing playbook — 1,200+ test cases across 27 teams, 450 user accounts provisioned, post-migration access issues held to under 3% of users.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">DOJ Subpoena Response</span>
+                  <span class="bullet-desc">Coordinated delivery of 14 complex data requests including analysis of two billion records, meeting every regulatory deadline with zero follow-up requests.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">Compliance Certifications</span>
+                  <span class="bullet-desc">Led 2022 EHNAC and CAQH certifications to 98% — tying the highest in company history.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">Vendor Negotiation</span>
+                  <span class="bullet-desc">Negotiated a 7-year, ~$15M strategic vendor agreement.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="exp-card">
+          <div class="exp-inner">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Senior Manager, Business Analysis</div>
+                <div class="exp-company">Cognizant — TriZetto</div>
+              </div>
+              <div class="exp-dates">Jan 2013 – Dec 2017</div>
+            </div>
+            <p class="exp-body">Led a team of four business analysts across Corporate Applications (Salesforce, Oracle, SharePoint, Hyperion), serving finance, HR, marketing, and product teams.</p>
+            <ul class="exp-bullets">
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">Governance Process Design</span>
+                  <span class="bullet-desc">Designed a software enhancement and break/fix governance process tied to ticketing and reporting, replacing ad hoc requests with a ranked, trackable system.</span>
+                </div>
+              </li>
+              <li class="exp-bullet">
+                <span class="bullet-dot">▸</span>
+                <div class="bullet-content">
+                  <span class="bullet-label">BA/PM Model</span>
+                  <span class="bullet-desc">Established a formal BA/PM partnership model, embedding business analysis into the project lifecycle and improving requirements quality and delivery outcomes.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Earlier -->
+        <div class="exp-card" style="margin-bottom:0;">
+          <div class="exp-earlier">
+            <strong>Earlier career:</strong> Manager, Web Development at The TriZetto Group (2010–2013) — led SharePoint collaboration portal earning a Quality Excellence Award; named to TriZetto Circle of Distinction (top 5% of performers). VP of Technology at The Turnaround Team, Inc. (1997–2004) — built and led a technology division from 1 to 12 people and $100K to $2.5M in revenue, delivering for IBM, Lucent, BASF, and the U.S. Postal Service.
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       EDUCATION & RECOGNITION
+  ═══════════════════════════════ -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-label">Education</div>
+          <div class="edu-item">
+            <div class="edu-degree">M.P.S., Interactive Telecommunications</div>
+            <div class="edu-school">New York University</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">B.S., Computer Science</div>
+            <div class="edu-school">DeSales University</div>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-label">Recognition</div>
+          <div class="award"><span class="award-star">★</span><span>TriZetto Innovator of the Year Runner-Up (2009)</span></div>
+          <div class="award"><span class="award-star">★</span><span>TriZetto Circle of Distinction — top 5% of performers (2009–2013)</span></div>
+          <div class="award"><span class="award-star">★</span><span>Quality Excellence Award — T3 Central SharePoint portal</span></div>
+          <div class="award"><span class="award-star">★</span><span>Member, Project Management Institute (PMI)</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       CONTACT
+  ═══════════════════════════════ -->
+  <section id="contact" class="section section-white">
+    <div class="section-inner">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Let's talk.</h2>
+      <p style="font-size:15px;color:#5a6a80;max-width:540px;margin-bottom:1.75rem;line-height:1.75;">
+        Exploring opportunities in operations, process improvement, and AI-assisted workflow infrastructure.
+        If you're working on something where operational depth matters, reach out.
+      </p>
+      <div class="contact-cards">
+        <!-- REPLACE with your actual email -->
+        <a href="mailto:mike@bielen.net" class="contact-card">
+          <div class="contact-icon"><i class="ti ti-mail"></i></div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">mike@bielen.net</div>
+          </div>
+        </a>
+        <!-- REPLACE with your actual LinkedIn URL -->
+        <a href="https://linkedin.com/in/michaelbielen" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon"><i class="ti ti-brand-linkedin"></i></div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">linkedin.com/in/michaelbielen</div>
+          </div>
+        </a>
+        <!-- REPLACE "resume.pdf" with your actual resume filename -->
+        <a href="resume.pdf" download class="contact-card">
+          <div class="contact-icon"><i class="ti ti-file-download"></i></div>
+          <div>
+            <div class="contact-label">Résumé</div>
+            <div class="contact-value">Download PDF</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       FOOTER
+  ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-name">Michael Bielen<span>.</span></div>
+    <div class="footer-copy">© 2026 · Westfield, NJ</div>
+    <div class="footer-copy">Senior Operations &amp; Process Improvement · Data Governance · AI Automation</div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════ -->
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+      }
+    });
+
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.style.color = link.getAttribute('href') === '#' + entry.target.id ? '#4f46e5' : '';
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
